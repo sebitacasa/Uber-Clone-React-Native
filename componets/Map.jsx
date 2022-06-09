@@ -30,7 +30,7 @@ const Map = () => {
 
       fetch(
          `https://maps.googleapis.com/maps/api/distancematrix/json?
-         units=imperial&origins=${origin.description}&destinations=${destination.description}&key=${"AIzaSyAbywGZWtzaib7JCsB88OHHQ6hw_Kg-VEg"}`
+         units=imperial&origins=${origin.description}&destinations=${destination.description}&key=${API_KEY}`
        ).then((res) => res.json())
        .then(data => {
         dispatch( setTravelTimeInformation(data.rows[0].elements[0]))
